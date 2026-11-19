@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SupplySphere - Shipping Calculator</title>
+    <script src="PR11.js" defer></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef2f3;
+            text-align: center;
+            color: #183b4e;
+        }
+
+        .box {
+            background: white;
+            max-width: 420px;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 10px;
+            border-top: 5px solid #28566b;
+        }
+
+        input, select {
+            width: 85%;
+            padding: 11px;
+            margin: 10px;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #28566b;
+            color: white;
+            padding: 11px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background: #183b4e;
+        }
+
+        #result {
+            background: #dce8ed;
+            padding: 15px;
+            margin-top: 18px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>SupplySphere</h2>
+    <p>Shipping Cost Calculator</p>
+
+    <form action="#" method="post" onsubmit="processBill(event)">
+        <input type="number" id="packages"
+               placeholder="Number of Packages">
+
+        <input type="number" id="cost"
+               placeholder="Cost per Package (₹)">
+
+        <select id="type">
+            <option value="standard">Standard Delivery</option>
+            <option value="express">Express Delivery</option>
+        </select>
+
+        <button type="submit">Calculate Bill</button>
+        <button type="button" onclick="resetForm()">Reset</button>
+    </form>
+
+    <div id="result">Your bill will appear here.</div>
+</div>
+
+</body>
+</html>
